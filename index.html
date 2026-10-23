@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>🌸 My To-Do App</h1>
+        <p>Small steps lead to big achievements!</p>
+        <button id="theme-btn">🌙 Dark Mode</button>
+    </header>
+
+    <main class="container">
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <p id="total-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed</h3>
+                <p id="completed-tasks">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <p id="pending-tasks">0</p>
+            </div>
+        </section>
+
+        <section class="progress-card">
+            <h3>📊 Your Progress</h3>
+            <div class="progress-background">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="progress-text">0% completed</p>
+        </section>
+
+        <section class="task-form">
+            <h2>✨ Add a New Task</h2>
+
+            <form id="task-form">
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Enter your task..."
+                    required
+                >
+
+                <select id="category-input">
+                    <option value="Study">📚 Study</option>
+                    <option value="Work">💻 Work</option>
+                    <option value="Personal">🌸 Personal</option>
+                    <option value="Shopping">🛍️ Shopping</option>
+                </select>
+
+                <input type="date" id="date-input">
+
+                <button type="submit" id="add-btn">+ Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-controls">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="🔍 Search tasks..."
+            >
+
+            <select id="filter-input">
+                <option value="all">All Tasks</option>
+                <option value="pending">Pending Tasks</option>
+                <option value="completed">Completed Tasks</option>
+            </select>
+
+            <select id="sort-input">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="alphabetical">Alphabetical</option>
+            </select>
+        </section>
+
+        <section class="tasks-section">
+            <div class="tasks-heading">
+                <h2>📝 My Tasks</h2>
+                <button id="clear-completed-btn">Clear Completed</button>
+            </div>
+
+            <div id="task-list"></div>
+
+            <p id="empty-message">No tasks yet. Add your first task! 🌷</p>
+        </section>
+
+        <footer>
+            <p>Made with 💜 | Stay organized, stay happy!</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
